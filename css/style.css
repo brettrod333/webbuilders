@@ -811,3 +811,18 @@ section { padding: 72px 0; scroll-margin-top: 84px; }
   .reveal { transition: none; opacity: 1; transform: none; }
   .card, .step, .price-card { transition: none; }
 }
+
+
+/* Fade the whole page in from white on load (e.g. arriving from the Carrd landing page) */
+body {
+     animation: page-fade-in 0.7s ease both;
+}
+
+@keyframes page-fade-in {
+     from { opacity: 0; }
+     to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+     body { animation: none; opacity: 1; }
+}
