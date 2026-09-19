@@ -820,11 +820,11 @@ section { padding: 72px 0; scroll-margin-top: 84px; }
    so the page is never stuck invisible. */
 body {
      opacity: 0;
-     animation: page-fade-in 0.6s ease 1.2s forwards;
+             animation: page-fade-in 1.5s ease 1.8s forwards;
 }
 
 body.page-ready {
-     animation: page-fade-in 0.6s ease forwards;
+         animation: page-fade-in 1.5s ease forwards;
 }
 
 @keyframes page-fade-in {
