@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hosting & Support Plans | Web Builders</title>
+<link rel="icon" type="image/png" href="images/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#24303D;
+    --ink-soft:#55606C;
+    --line:#E7DFC9;
+    --bg:#FBF9F4;
+    --panel:#FFFFFF;
+    --accent:#1F3B57;
+    --accent-soft:rgba(31, 59, 87, 0.08);
+    --gold:#C9A227;
+    --gold-dark:#A8841C;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Nunito Sans','Inter',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+  }
+  .page{
+    max-width:900px;
+    margin:0 auto;
+    padding:56px 24px 100px;
+  }
+  .site-link{
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
+    text-decoration:none;
+    margin-bottom:28px;
+  }
+  .site-link img{ height:30px; width:auto; }
+  .brand-mark{
+    font-size:12.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  h1{
+    font-family:'Quicksand','Poppins',sans-serif;
+    color:var(--accent);
+    font-size:34px;
+    font-weight:700;
+    line-height:1.2;
+    margin:0 0 12px;
+  }
+  .intro{
+    font-size:16px;
+    line-height:1.6;
+    color:var(--ink-soft);
+    margin:0 0 40px;
+    max-width:600px;
+  }
+  .tier-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+  }
+  @media (max-width:760px){
+    .tier-grid{ grid-template-columns:1fr; }
+  }
+  .tier-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:28px 24px;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 10px 30px rgba(26,32,39,.05);
+  }
+  .tier-card.featured{
+    border-color:var(--accent);
+    box-shadow:0 14px 38px rgba(31,59,87,.14);
+  }
+  .tier-badge{
+    align-self:flex-start;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--gold-dark);
+    background:var(--accent-soft);
+    border-radius:999px;
+    padding:4px 10px;
+    margin-bottom:14px;
+  }
+  .tier-name{
+    font-family:'Quicksand','Poppins',sans-serif;
+    font-size:20px;
+    font-weight:700;
+    color:var(--accent);
+    margin:0 0 6px;
+  }
+  .tier-price{
+    font-size:30px;
+    font-weight:700;
+    color:var(--ink);
+    margin:0 0 4px;
+  }
+  .tier-price span{
+    font-size:14px;
+    font-weight:600;
+    color:var(--ink-soft);
+  }
+  .tier-desc{
+    font-size:13.5px;
+    line-height:1.55;
+    color:var(--ink-soft);
+    margin:10px 0 22px;
+    flex-grow:1;
+  }
+  .tier-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    padding:13px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:14px;
+    font-family:'Quicksand','Poppins',sans-serif;
+    background:var(--gold);
+    color:var(--accent);
+    transition:transform .15s ease, background .15s ease;
+  }
+  .tier-btn:hover{ background:var(--gold-dark); transform:translateY(-2px); }
+  .tier-card.featured .tier-btn{
+    background:var(--accent);
+    color:#fff;
+  }
+  .tier-card.featured .tier-btn:hover{ background:#16283a; }
+  .note{
+    margin-top:36px;
+    font-size:13px;
+    color:var(--ink-soft);
+    text-align:center;
+  }
+
+  body{
+    opacity:0;
+    animation:page-fade-in 1.5s ease 1.8s forwards;
+  }
+  body.page-ready{ animation:page-fade-in 1.5s ease forwards; }
+  @keyframes page-fade-in{ from{opacity:0;} to{opacity:1;} }
+  @media (prefers-reduced-motion: reduce){
+    body{ animation:none; opacity:1; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <a class="site-link" href="index.html">
+    <img src="images/logo.png" alt="Web Builders">
+  </a>
+  <div class="brand-mark">Hosting &amp; Support</div>
+  <h1>Keep your site running smoothly.</h1>
+  <p class="intro">Every site includes hosting and a set number of included updates each month, so you're never stuck waiting or paying per small change. Pick the plan that fits how often your site needs to change.</p>
+
+  <div class="tier-grid">
+    <div class="tier-card">
+      <div class="tier-badge">Basic</div>
+      <div class="tier-name">Basic</div>
+      <div class="tier-price">$25<span>/mo</span></div>
+      <p class="tier-desc">Hosting, plus 1 small update a month &mdash; a phone number change, a price update, a photo swap.</p>
+      <a class="tier-btn" href="https://buy.stripe.com/bJe4gz5NRbsgaE2aAW63K07">Subscribe</a>
+    </div>
+    <div class="tier-card featured">
+      <div class="tier-badge">Most popular</div>
+      <div class="tier-name">Standard</div>
+      <div class="tier-price">$35<span>/mo</span></div>
+      <p class="tier-desc">Hosting, plus a handful of included updates a month, with faster turnaround.</p>
+      <a class="tier-btn" href="https://buy.stripe.com/fZu4gzeknfIwbI66kG63K08">Subscribe</a>
+    </div>
+    <div class="tier-card">
+      <div class="tier-badge">Priority</div>
+      <div class="tier-name">Priority</div>
+      <div class="tier-price">$50<span>/mo</span></div>
+      <p class="tier-desc">Hosting, unlimited small updates, and same-day turnaround.</p>
+      <a class="tier-btn" href="https://buy.stripe.com/cNidR90tx7c06nMcJ463K09">Subscribe</a>
+    </div>
+  </div>
+
+  <p class="note">Not sure which plan fits? Reach out and we'll help you pick &mdash; (618) 685-0516 or 654bbr@gmail.com.</p>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    document.body.classList.add('page-ready');
+  });
+</script>
+</body>
+</html>
