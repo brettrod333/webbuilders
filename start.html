@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Your Website Project | Web Builders</title>
+<link rel="icon" type="image/png" href="images/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#24303D;
+    --ink-soft:#55606C;
+    --line:#E7DFC9;
+          --bg:#FBF9F4;
+          --panel:#FFFFFF;
+          --accent:#1F3B57;
+    --accent-soft:rgba(31, 59, 87, 0.08);
+    --gold:#C9A227;
+          --gold-dark:#A8841C;
+      }
+  *{box-sizing:border-box;}
+  body{
+        margin:0;
+    font-family:'Nunito Sans','Inter',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+}
+  .page{
+        max-width:720px;
+    margin:0 auto;
+    padding:56px 24px 100px;
+}
+  .brand-mark{
+        font-size:12.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:10px;
+}
+  h1{
+        font-family:'Quicksand','Poppins',sans-serif;
+    color:var(--accent);
+    font-size:34px;
+    font-weight:700;
+    line-height:1.2;
+    margin:0 0 12px;
+}
+  .intro{
+        color:var(--ink-soft);
+    font-size:15px;
+    line-height:1.6;
+    margin:0 0 40px;
+    max-width:560px;
+  }
+  .card{
+        background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:32px;
+    margin-bottom:22px;
+  }
+  .card h2{
+        font-family:'Quicksand','Poppins',sans-serif;
+    color:var(--accent);
+    font-size:19px;
+    font-weight:700;
+    margin:0 0 6px;
+}
+  .card .sub{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:0 0 22px;
+  }
+  .field{ margin-bottom:20px; }
+  .field:last-child{ margin-bottom:0; }
+  label.field-label{
+        display:block;
+    font-family:'Quicksand','Poppins',sans-serif;
+    font-size:13.5px;
+    font-weight:700;
+    color:var(--accent);
+    margin-bottom:7px;
+}
+  input[type="text"], input[type="email"], input[type="tel"], textarea{
+        width:100%;
+    padding:11px 13px;
+    font-size:14.5px;
+    font-family:inherit;
+    color:var(--ink);
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:#FDFCFA;
+    }
+        input:focus, textarea:focus{
+          outline:none;
+    border-color:var(--accent);
+    background:#fff;
+    }
+  textarea{ resize:vertical; min-height:70px; }
+  .two-col{
+        display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+  .option-list{ display:flex; flex-direction:column; gap:2px; }
+  .option-row{
+        display:flex;
+    align-items:center;
+    gap:10px;
+        padding:9px 4px;
+    font-size:14.5px;
+    border-bottom:1px solid #F1EFEA;
+      }
+  .option-row:last-child{ border-bottom:none; }
+  .option-row input{ width:16px; height:16px; accent-color:var(--accent); flex-shrink:0; }
+  .option-row.locked{ color:var(--ink-soft); }
+  .palette-grid{
+        display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+  .palette-card{
+        border:1px solid var(--line);
+    border-radius:10px;
+          padding:12px 14px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:13px;
+      }
+      .palette-card.selected{
+    border-color:var(--accent);
+    background:var(--accent-soft);
+    font-weight:600;
+      }
+  .swatches{ display:flex; }
+  .swatches span{
+        width:16px; height:16px; border-radius:50%;
+    border:1px solid rgba(0,0,0,.1);
+          margin-left:-5px;
+  }
+  .swatches span:first-child{ margin-left:0; }
+  .style-grid{
+        display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+        .style-card{
+              border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px;
+    text-align:center;
+        cursor:pointer;
+    font-size:14px;
+}
+  .style-card.selected{
+    border-color:var(--accent);
+    background:var(--accent-soft);
+    font-weight:600;
+}
+  .submit-bar{
+        margin-top:8px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+  .btn-primary{
+        width:100%;
+    padding:16px;
+    border:none;
+    border-radius:999px;
+    background:var(--gold);
+    color:var(--accent);
+    font-size:15px;
+    font-weight:700;
+    font-family:'Quicksand','Poppins',sans-serif;
+    cursor:pointer;
+    transition:transform 0.15s ease, background 0.15s ease;
+}
+  .btn-primary:hover{ background:var(--gold-dark); transform:translateY(-2px); }
+  .btn-secondary{
+        width:100%;
+    padding:12px;
+    border:2px solid var(--accent);
+    border-radius:999px;
+    background:transparent;
+    color:var(--accent);
+    font-size:13.5px;
+    font-weight:700;
+    font-family:'Quicksand','Poppins',sans-serif;
+    cursor:pointer;
+}
+  .btn-secondary:hover{ background:var(--accent); color:#fff; }
+    .status-msg{
+          display:none;
+    font-size:13px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border-radius:8px;
+    padding:11px 14px;
+    text-align:center;
+                      }
+  .status-msg.show{ display:block; }
+.required-note{
+  font-size:12px;
+color:var(--ink-soft);
+text-align:center;
+margin-top:4px;
+}
+
+/* ---- business category picker ---- */
+.cat-picker{ position:relative; }
+.cat-dropdown{
+  position:absolute;
+z-index:20;
+top:calc(100% + 6px);
+left:0;
+right:0;
+max-height:280px;
+overflow-y:auto;
+background:#fff;
+border:1px solid var(--line);
+border-radius:10px;
+box-shadow:0 14px 34px rgba(26,32,39,.12);
+padding:6px 0;
+}
+.cat-group-label{
+  font-family:'Manrope',sans-serif;
+font-weight:700;
+font-size:11px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:var(--gold);
+padding:9px 14px 3px;
+}
+.cat-option{
+  padding:8px 14px;
+font-size:14px;
+color:var(--ink);
+cursor:pointer;
+}
+.cat-option:hover, .cat-option.active{
+background:var(--accent-soft);
+color:var(--accent);
+}
+.cat-empty{
+  padding:12px 14px;
+font-size:13px;
+color:var(--ink-soft);
+}
+.cat-note{
+  font-size:13px;
+margin:10px 0 0;
+padding:9px 12px;
+border-radius:8px;
+background:var(--accent-soft);
+color:var(--accent);
+line-height:1.5;
+}
+.cat-note.uncertain{
+background:#FBF2E3;
+color:#8A6A1F;
+}
+.site-link{
+  display:inline-flex;
+align-items:center;
+gap:9px;
+text-decoration:none;
+margin-bottom:28px;
+}
+.site-link img{ height:30px; width:auto; }
+.site-link span{
+  font-family:'Quicksand','Poppins',sans-serif;
+font-weight:700;
+font-size:1rem;
+color:var(--accent);
+}
+
+/* Page fade-in on load — matches the main Web Builders site */
+body{
+  opacity:0;
+animation:page-fade-in 1.5s ease 1.8s forwards;
+}
+body.page-ready{ animation:page-fade-in 1.5s ease forwards; }
+@keyframes page-fade-in{ from{opacity:0;} to{opacity:1;} }
+@media (prefers-reduced-motion: reduce){
+  body{ animation:none; opacity:1; }
+}
+</style>
+  </head>
+  <body>
+  <div class="page">
+  <a class="site-link" href="index.html">
+  <img src="images/logo.png" alt="Web Builders">
+  <span>Web Builders</span>
+  </a>
+  <div class="brand-mark">New Website Project</div>
+<h1>Let's build your new website.</h1>
+  <p class="intro">Answer the questions below — takes about five minutes. Once you submit, your answers go straight to me and I'll follow up shortly to confirm everything.</p>
+
+<div class="card">
+<h2>Your business</h2>
+<p class="sub">The basics, so we can get in touch and set things up.</p>
+  <div class="field">
+  <label class="field-label">Business name</label>
+  <input type="text" id="bizName" placeholder="e.g. Riverside Hardware">
+  </div>
+  <div class="two-col">
+  <div class="field">
+  <label class="field-label">Your name</label>
+  <input type="text" id="contactName">
+  </div>
+  <div class="field">
+  <label class="field-label">Phone number</label>
+  <input type="tel" id="phone">
+  </div>
+  </div>
+  <div class="field">
+  <label class="field-label">Email address</label>
+  <input type="email" id="email">
+  </div>
+  <div class="field">
+  <label class="field-label">Current website (if you have one)</label>
+  <input type="text" id="currentSite" placeholder="Leave blank if none">
+  </div>
+  <div class="field">
+  <label class="field-label">What kind of business is this?</label>
+  <div class="cat-picker" id="catPicker">
+  <input
+  type="text"
+  id="bizCategoryInput"
+  autocomplete="off"
+  placeholder="Start typing — e.g. &quot;taco truck&quot;, &quot;hair salon&quot;, &quot;landscaping&quot;"
+  role="combobox"
+  aria-expanded="false"
+  aria-controls="catDropdown"
+  aria-autocomplete="list">
+  <input type="hidden" id="bizCategory">
+  <input type="hidden" id="bizCategoryRaw">
+  <div class="cat-dropdown" id="catDropdown" role="listbox" hidden></div>
+  <p class="cat-note" id="catNote" hidden></p>
+  </div>
+  </div>
+  <div class="field">
+  <label class="field-label">What does your business do?</label>
+  <textarea id="bizDescription" placeholder="A sentence or two is perfect"></textarea>
+  </div>
+  </div>
+
+  <div class="card">
+    <h2>What you want your site to do</h2>
+<p class="sub">Check all that matter to you.</p>
+    <div class="option-list" id="goalList">
+    <div class="option-row"><input type="checkbox" class="goal-chk" value="Get customers to call"><span>Get customers to call me</span></div>
+    <div class="option-row"><input type="checkbox" class="goal-chk" value="Get customers to visit"><span>Get customers to visit my store/location</span></div>
+    <div class="option-row"><input type="checkbox" class="goal-chk" value="Get bookings"><span>Get customers to book an appointment</span></div>
+    <div class="option-row"><input type="checkbox" class="goal-chk" value="Get online orders"><span>Get customers to order/buy online</span></div>
+    <div class="option-row"><input type="checkbox" class="goal-chk" value="Look professional online"><span>Just be found online and look professional</span></div>
+    </div>
+    <div class="field" style="margin-top:18px;">
+    <label class="field-label">If you want online ordering, which fits better?</label>
+<div class="option-list">
+<div class="option-row"><input type="radio" name="orderStyle" value="Real shopping cart/checkout"><span>A real shopping cart / checkout</span></div>
+    <div class="option-row"><input type="radio" name="orderStyle" value="Contact-to-order is fine"><span>Just want customers to reach out to order</span></div>
+    <div class="option-row"><input type="radio" name="orderStyle" value="Not applicable"><span>Not applicable</span></div>
+    </div>
+    </div>
+    </div>
+
+    <div class="card">
+    <h2>Pages you'd like</h2>
+    <p class="sub">Check all that apply.</p>
+    <div class="option-list">
+    <div class="option-row locked"><input type="checkbox" checked disabled><span>Home (always included)</span></div>
+    <div class="option-row"><input type="checkbox" id="pgAbout" checked><span>About Us</span></div>
+    <div class="option-row"><input type="checkbox" id="pgServices" checked><span>Services / Products</span></div>
+    <div class="option-row"><input type="checkbox" id="pgGallery"><span>Photo Gallery</span></div>
+    <div class="option-row"><input type="checkbox" id="pgContact" checked><span>Contact / Location & Hours</span></div>
+    </div>
+    </div>
+
+    <div class="card">
+    <h2>Look and feel</h2>
+<p class="sub">Pick the style that feels most like your business.</p>
+<div class="style-grid" id="styleGrid">
+<div class="style-card selected" data-val="Clean & modern" style="font-family:'Manrope',sans-serif;">Clean & Modern</div>
+    <div class="style-card" data-val="Classic & elegant" style="font-family:Georgia,serif;">Classic & Elegant</div>
+    <div class="style-card" data-val="Friendly & warm" style="font-family:'Manrope',sans-serif;">Friendly & Warm</div>
+    <div class="style-card" data-val="Bold & structured" style="font-family:'Manrope',sans-serif; font-weight:700;">Bold & Structured</div>
+    </div>
+    <p class="sub" style="margin-top:22px;">Choose a color palette.</p>
+    <div class="palette-grid" id="paletteGrid">
+    <div class="palette-card selected" data-val="Warm & trustworthy — deep blue, cream, gold">
+    <span class="swatches"><span style="background:#1F3B57"></span><span style="background:#F5EFE0"></span><span style="background:#C9A227"></span></span>
+    Warm & Trustworthy
+    </div>
+    <div class="palette-card" data-val="Clean & modern — charcoal, white, teal">
+    <span class="swatches"><span style="background:#2B2F36"></span><span style="background:#FFFFFF"></span><span style="background:#2F8F82"></span></span>
+    Clean & Modern
+    </div>
+    <div class="palette-card" data-val="Fresh & friendly — sage, cream, coral">
+    <span class="swatches"><span style="background:#6B8F71"></span><span style="background:#FBF7F0"></span><span style="background:#E27D60"></span></span>
+    Fresh & Friendly
+    </div>
+    <div class="palette-card" data-val="Bold & energetic — navy, white, red">
+    <span class="swatches"><span style="background:#142850"></span><span style="background:#FFFFFF"></span><span style="background:#D7263D"></span></span>
+    Bold & Energetic
+    </div>
+    <div class="palette-card" data-val="Classic & elegant — black, white, muted gold">
+    <span class="swatches"><span style="background:#14161A"></span><span style="background:#FFFFFF"></span><span style="background:#B08D57"></span></span>
+    Classic & Elegant
+    </div>
+    <div class="palette-card" data-val="Earthy & grounded — umber, sand, moss green">
+    <span class="swatches"><span style="background:#4B3B32"></span><span style="background:#F1E6D8"></span><span style="background:#8A9A5B"></span></span>
+    Earthy & Grounded
+    </div>
+    <div class="palette-card" data-val="Cool & calm — slate navy, icy white, seafoam teal">
+    <span class="swatches"><span style="background:#223843"></span><span style="background:#F4F7F7"></span><span style="background:#5FA8A0"></span></span>
+    Cool & Calm
+</div>
+    <div class="palette-card" data-val="Bright & playful — deep plum, cream, marigold">
+    <span class="swatches"><span style="background:#2B2440"></span><span style="background:#FFFBEF"></span><span style="background:#F2994A"></span></span>
+    Bright & Playful
+    </div>
+    <div class="palette-card" data-val="Rustic & cozy — espresso brown, linen, burnt rust">
+    <span class="swatches"><span style="background:#3E2723"></span><span style="background:#F5EDE4"></span><span style="background:#C1440E"></span></span>
+    Rustic & Cozy
+    </div>
+    <div class="palette-card" data-val="Coastal & airy — ocean blue, white, sandy tan">
+    <span class="swatches"><span style="background:#17475E"></span><span style="background:#F7FAFB"></span><span style="background:#E0A96D"></span></span>
+    Coastal & Airy
+    </div>
+    <div class="palette-card" data-val="Luxe & moody — near-black, ivory, deep wine">
+    <span class="swatches"><span style="background:#1B1B1E"></span><span style="background:#F0EAE0"></span><span style="background:#7A1F2B"></span></span>
+    Luxe & Moody
+    </div>
+    <div class="palette-card" data-val="Not sure — Brett's choice">
+<span class="swatches"><span style="background:#DDD"></span><span style="background:#EEE"></span><span style="background:#CCC"></span></span>
+    Not sure, you pick
+</div>
+    </div>
+    </div>
+
+    <div class="card">
+    <h2>Logo & photos</h2>
+    <div class="field">
+    <label class="field-label">Do you have a logo?</label>
+    <div class="option-list">
+    <div class="option-row"><input type="radio" name="logo" value="Use current logo"><span>Yes, use my current logo</span></div>
+    <div class="option-row"><input type="radio" name="logo" value="No logo yet"><span>No logo yet</span></div>
+<div class="option-row"><input type="radio" name="logo" value="Want a new logo designed"><span>I'd like a new one designed</span></div>
+    </div>
+    </div>
+    <div class="field">
+    <label class="field-label">Photos</label>
+    <div class="option-list">
+    <div class="option-row"><input type="radio" name="photos" value="I will send my own photos"><span>I'll send my own photos</span></div>
+    <div class="option-row"><input type="radio" name="photos" value="Use stock or AI images"><span>Use stock/AI images instead</span></div>
+    </div>
+    </div>
+    <p class="sub" style="margin-top:14px; margin-bottom:0;">If you have a logo or photos ready, just email them to 654bbr@gmail.com after submitting this form.</p>
+    </div>
+
+    <div class="card">
+    <h2>Pricing, story & testimonials</h2>
+    <p class="sub">Skip anything that doesn't apply — we can add these later too.</p>
+    <div class="field">
+    <label class="field-label">Do you want pricing or packages listed on the site?</label>
+    <textarea id="pricing" placeholder="e.g. Basic Wash $25, Full Detail $80 — or leave blank if you'd rather not show prices"></textarea>
+    </div>
+    <div class="field">
+    <label class="field-label">Tell us your story (for the About page)</label>
+<textarea id="story" placeholder="How did you get started? What makes your business different? A paragraph or two is great."></textarea>
+</div>
+<div class="field">
+<label class="field-label">Any customer testimonials or reviews you'd like featured?</label>
+    <textarea id="testimonials" placeholder="Paste 1-3 short quotes, or leave blank"></textarea>
+    </div>
+    </div>
+
+    <div class="card">
+    <h2>Anything else?</h2>
+    <p class="sub">Websites you like the look of, things you definitely don't want, or anything else worth knowing.</p>
+    <div class="field">
+    <textarea id="notes" style="min-height:90px;"></textarea>
+    </div>
+    </div>
+
+    <div class="submit-bar">
+    <button class="btn-primary" id="submitBtn">Submit my answers</button>
+<button class="btn-secondary" id="copyBtn">Copy my answers instead</button>
+    <div class="status-msg" id="statusMsg"></div>
+    <p class="required-note">Submitting opens your email app with everything filled in — just hit send.</p>
+  </div>
+  </div>
+
+  <script src="js/business-categories.js"></script>
+  <script>
+  if (document.body) document.body.classList.add('page-ready');
+
+document.querySelectorAll('.palette-card').forEach(el => {
+  el.addEventListener('click', () => {
+  document.querySelectorAll('.palette-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+ });
+});
+document.querySelectorAll('.style-card').forEach(el => {
+  el.addEventListener('click', () => {
+  document.querySelectorAll('.style-card').forEach(c => c.classList.remove('selected'));
+el.classList.add('selected');
+});
+});
+
+// ---------------- Business category picker ----------------
+(function () {
+var data = window.MWS_BUSINESS_CATEGORIES;
+var picker = document.getElementById('catPicker');
+if (!data || !picker) return;
+
+var input = document.getElementById('bizCategoryInput');
+var hiddenValue = document.getElementById('bizCategory');
+var hiddenRaw = document.getElementById('bizCategoryRaw');
+var dropdown = document.getElementById('catDropdown');
+var note = document.getElementById('catNote');
+
+var activeIndex = -1;
+var currentOptions = [];
+
+function closeList() {
+  dropdown.hidden = true;
+input.setAttribute('aria-expanded', 'false');
+activeIndex = -1;
+}
+function openList() {
+  dropdown.hidden = false;
+input.setAttribute('aria-expanded', 'true');
+}
+function renderGroups(groups) {
+  dropdown.innerHTML = '';
+currentOptions = [];
+if (!groups.length) {
+var empty = document.createElement('div');
+empty.className = 'cat-empty';
+empty.textContent = 'No exact match — keep typing, or click away and we\'ll match your own words to the closest category.';
+  dropdown.appendChild(empty);
+return;
+}
+groups.forEach(function (group) {
+  var heading = document.createElement('div');
+heading.className = 'cat-group-label';
+heading.textContent = group.sector;
+dropdown.appendChild(heading);
+group.categories.forEach(function (catName) {
+  var opt = document.createElement('div');
+opt.className = 'cat-option';
+opt.setAttribute('role', 'option');
+opt.id = 'cat-opt-' + currentOptions.length;
+opt.textContent = catName;
+opt.addEventListener('mousedown', function (e) {
+  e.preventDefault();
+selectCategory(catName);
+});
+dropdown.appendChild(opt);
+currentOptions.push(catName);
+});
+});
+}
+function highlightActive() {
+  var opts = dropdown.querySelectorAll('.cat-option');
+opts.forEach(function (el, i) {
+  if (i === activeIndex) {
+el.classList.add('active');
+el.scrollIntoView({ block: 'nearest' });
+  } else {
+el.classList.remove('active');
+  }
+});
+}
+function showNote(message, tone) {
+  note.hidden = false;
+note.textContent = message;
+note.className = 'cat-note' + (tone ? ' ' + tone : '');
+}
+function hideNote() {
+  note.hidden = true;
+note.textContent = '';
+}
+function selectCategory(name) {
+  input.value = name;
+hiddenValue.value = name;
+hiddenRaw.value = name;
+hideNote();
+closeList();
+}
+function attemptFuzzyMatch() {
+  var typed = input.value.trim();
+if (!typed) {
+hiddenValue.value = '';
+  hiddenRaw.value = '';
+    hideNote();
+return;
+}
+var exact = data.flat.filter(function (c) { return c.name.toLowerCase() === typed.toLowerCase(); })[0];
+if (exact) { selectCategory(exact.name); return; }
+
+hiddenRaw.value = typed;
+var result = data.match(typed);
+if (result && result.confident) {
+hiddenValue.value = result.category;
+input.value = result.category;
+showNote('Matched "' + typed + '" to "' + result.category + '". Not right? Just start typing again to change it.', 'matched');
+} else if (result) {
+hiddenValue.value = typed;
+showNote('Not fully sure which category fits "' + typed + '" — closest guess is "' + result.category + '". We saved what you typed either way, and Brett will confirm it with you.', 'uncertain');
+} else {
+hiddenValue.value = typed;
+showNote('Saved as typed: "' + typed + '". Brett will follow up to confirm the category.', 'uncertain');
+}
+}
+
+input.addEventListener('input', function () {
+  hideNote();
+renderGroups(data.filter(input.value, 40));
+activeIndex = -1;
+openList();
+});
+input.addEventListener('focus', function () {
+  renderGroups(data.filter(input.value, 40));
+  openList();
+});
+input.addEventListener('keydown', function (e) {
+  if (dropdown.hidden && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) { openList(); return; }
+if (e.key === 'ArrowDown') {
+e.preventDefault();
+activeIndex = Math.min(activeIndex + 1, currentOptions.length - 1);
+highlightActive();
+} else if (e.key === 'ArrowUp') {
+e.preventDefault();
+activeIndex = Math.max(activeIndex - 1, 0);
+highlightActive();
+} else if (e.key === 'Enter') {
+if (!dropdown.hidden && activeIndex >= 0 && currentOptions[activeIndex]) {
+e.preventDefault();
+selectCategory(currentOptions[activeIndex]);
+} else {
+e.preventDefault();
+attemptFuzzyMatch();
+closeList();
+}
+} else if (e.key === 'Escape') {
+closeList();
+}
+});
+input.addEventListener('blur', function () {
+  setTimeout(function () {
+if (dropdown.hidden) return;
+attemptFuzzyMatch();
+closeList();
+  }, 120);
+});
+})();
+
+function val(id){ return document.getElementById(id).value.trim(); }
+function checked(id){ return document.getElementById(id).checked; }
+function radioVal(name){
+  const el = document.querySelector(`input[name="${name}"]:checked`);
+return el ? el.value : "Not specified";
+}
+
+function buildSummary(){
+  const goals = Array.from(document.querySelectorAll('.goal-chk:checked')).map(el => el.value);
+const pages = ["Home"];
+if (checked('pgAbout')) pages.push("About Us");
+if (checked('pgServices')) pages.push("Services/Products");
+if (checked('pgGallery')) pages.push("Photo Gallery");
+if (checked('pgContact')) pages.push("Contact");
+
+const style = document.querySelector('.style-card.selected')?.dataset.val || "Not specified";
+const palette = document.querySelector('.palette-card.selected')?.dataset.val || "Not specified";
+
+const category = val('bizCategory');
+const categoryRaw = val('bizCategoryRaw');
+let categoryLine = category || "Not specified";
+if (categoryRaw && categoryRaw !== category) {
+categoryLine += ` (typed as: "${categoryRaw}")`;
+}
+
+return `NEW WEBSITE PROJECT INTAKE
+  =================================
+
+  BUSINESS
+  Business name: ${val('bizName') || "(not provided)"}
+Contact name: ${val('contactName') || "(not provided)"}
+Phone: ${val('phone') || "(not provided)"}
+Email: ${val('email') || "(not provided)"}
+Current website: ${val('currentSite') || "None"}
+Business category: ${categoryLine}
+What they do: ${val('bizDescription') || "(not provided)"}
+
+SITE GOAL
+${goals.length ? goals.join(", ") : "Not specified"}
+Online ordering preference: ${radioVal('orderStyle')}
+
+PAGES WANTED
+${pages.join(", ")}
+
+LOOK & FEEL
+Style: ${style}
+Palette: ${palette}
+
+PRICING/PACKAGES
+  ${val('pricing') || "(not provided)"}
+
+  BUSINESS STORY (for About page)
+  ${val('story') || "(not provided)"}
+
+TESTIMONIALS
+${val('testimonials') || "(none provided)"}
+
+LOGO
+${radioVal('logo')}
+
+PHOTOS
+${radioVal('photos')}
+
+ADDITIONAL NOTES
+${val('notes') || "(none)"}
+`;
+}
+
+document.getElementById('submitBtn').addEventListener('click', () => {
+  const summary = buildSummary();
+const bizName = val('bizName') || "New client";
+const subject = encodeURIComponent(`Website Intake — ${bizName}`);
+const body = encodeURIComponent(summary);
+window.location.href = `mailto:654bbr@gmail.com?subject=${subject}&body=${body}`;
+const msg = document.getElementById('statusMsg');
+msg.textContent = "Opening your email app now — just hit send.";
+msg.classList.add('show');
+});
+
+document.getElementById('copyBtn').addEventListener('click', async () => {
+  const summary = buildSummary();
+const msg = document.getElementById('statusMsg');
+try{
+await navigator.clipboard.writeText(summary);
+msg.textContent = "Copied! Paste it into an email or text to 654bbr@gmail.com.";
+}catch(e){
+msg.textContent = "Could not copy automatically — please select and copy the text manually.";
+}
+msg.classList.add('show');
+});
+</script>
+  </body>
+  </html>
