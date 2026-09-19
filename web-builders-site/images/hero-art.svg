@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" width="100%" height="100%" role="img" aria-label="Abstract geometric illustration representing a website layout, in deep blue, cream and gold">
+  <defs>
+    <clipPath id="blob1">
+      <path d="M400 100C440 150 450 230 420 300C390 370 320 420 240 420C160 420 90 370 60 300C30 230 40 140 100 90C160 40 250 30 320 50C360 62 380 70 400 100Z"/>
+    </clipPath>
+  </defs>
+
+  <path d="M400 100C440 150 450 230 420 300C390 370 320 420 240 420C160 420 90 370 60 300C30 230 40 140 100 90C160 40 250 30 320 50C360 62 380 70 400 100Z" fill="#F5EFE0"/>
+
+  <g clip-path="url(#blob1)">
+    <rect x="40" y="40" width="400" height="400" fill="#F5EFE0"/>
+    <rect x="90" y="150" width="300" height="230" rx="16" fill="#FFFFFF" stroke="#1F3B57" stroke-width="2"/>
+    <rect x="90" y="150" width="300" height="42" rx="16" fill="#1F3B57"/>
+    <circle cx="114" cy="171" r="6" fill="#C9A227"/>
+    <circle cx="134" cy="171" r="6" fill="#FFFFFF" opacity="0.6"/>
+    <circle cx="154" cy="171" r="6" fill="#FFFFFF" opacity="0.6"/>
+    <rect x="112" y="212" width="140" height="14" rx="7" fill="#1F3B57"/>
+    <rect x="112" y="236" width="180" height="8" rx="4" fill="#B9C3CD"/>
+    <rect x="112" y="252" width="150" height="8" rx="4" fill="#B9C3CD"/>
+    <rect x="112" y="278" width="100" height="34" rx="17" fill="#C9A227"/>
+    <rect x="250" y="212" width="110" height="100" rx="12" fill="#F5EFE0" stroke="#C9A227" stroke-width="2"/>
+    <circle cx="305" cy="250" r="18" fill="#1F3B57"/>
+    <rect x="112" y="330" width="278" height="1" fill="#E7DFC9"/>
+    <rect x="112" y="346" width="70" height="8" rx="4" fill="#B9C3CD"/>
+    <rect x="200" y="346" width="70" height="8" rx="4" fill="#B9C3CD"/>
+    <rect x="288" y="346" width="70" height="8" rx="4" fill="#B9C3CD"/>
+    <circle cx="440" cy="80" r="26" fill="#C9A227" opacity="0.9"/>
+    <circle cx="55" cy="400" r="16" fill="#1F3B57" opacity="0.85"/>
+  </g>
+</svg>

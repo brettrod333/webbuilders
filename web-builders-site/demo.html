@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Build Your Website Demo | Web Builders</title>
+<meta name="description" content="Tell us about your business, then watch an instant preview of your new website come to life — customize colors, style, sections, and photos in real time.">
+<link rel="icon" type="image/png" href="images/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Lora:wght@400;600&family=Archivo:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/demo-builder.css">
+</head>
+<body class="builder-page">
+
+<header class="builder-header">
+  <a href="index.html" class="brand">
+    <img src="images/logo.png" alt="Web Builders">
+  </a>
+  <a href="index.html" class="builder-back-link">&larr; Back to main site</a>
+</header>
+
+<!-- ============ STEP 1: BUSINESS INFO ============ -->
+<div id="step1">
+  <div class="builder-intro" style="margin-top:32px;">
+    <span class="eyebrow">Build a Website Demo</span>
+    <h1>Let's see what your new site could look like.</h1>
+    <p class="lede" style="margin:0 auto;">Tell us about your business — takes about five minutes. The moment you submit, we'll show you a live preview you can customize yourself: colors, fonts, sections, even photo style.</p>
+  </div>
+
+  <form class="builder-form" id="infoForm">
+    <div class="builder-card">
+      <h2>Your business</h2>
+      <p class="card-sub">The basics, so we can get in touch and set things up.</p>
+      <div class="builder-field">
+        <label for="bizName">Business name</label>
+        <input type="text" id="bizName" placeholder="e.g. Riverside Hardware">
+      </div>
+      <div class="builder-two-col">
+        <div class="builder-field">
+          <label for="contactName">Your name</label>
+          <input type="text" id="contactName">
+        </div>
+        <div class="builder-field">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone">
+        </div>
+      </div>
+      <div class="builder-field">
+        <label for="email">Email address</label>
+        <input type="email" id="email">
+      </div>
+      <div class="builder-field">
+        <label for="currentSite">Current website (if you have one)</label>
+        <input type="text" id="currentSite" placeholder="Leave blank if none">
+      </div>
+      <div class="builder-field">
+        <label for="business-category-input">What kind of business is this?</label>
+        <div class="category-picker" id="category-picker">
+          <input
+            type="text"
+            id="business-category-input"
+            autocomplete="off"
+            placeholder="Start typing — e.g. &quot;taco truck&quot;, &quot;hair salon&quot;, &quot;landscaping&quot;"
+            role="combobox"
+            aria-expanded="false"
+            aria-controls="category-listbox"
+            aria-autocomplete="list">
+          <input type="hidden" id="business-category">
+          <input type="hidden" id="business-category-raw">
+          <div class="category-dropdown" id="category-listbox" role="listbox" hidden></div>
+          <p class="category-match-note" id="category-match-note" hidden></p>
+        </div>
+      </div>
+      <div class="builder-field">
+        <label for="bizDescription">What does your business do?</label>
+        <textarea id="bizDescription" placeholder="A sentence or two is perfect"></textarea>
+      </div>
+    </div>
+
+    <div class="builder-card">
+      <h2>What you want your site to do</h2>
+      <p class="card-sub">Check all that matter to you — this shapes the preview's calls to action.</p>
+      <div class="builder-option-list">
+        <div class="builder-option-row"><input type="checkbox" class="goal-chk" value="Get customers to call"><span>Get customers to call me</span></div>
+        <div class="builder-option-row"><input type="checkbox" class="goal-chk" value="Get customers to visit"><span>Get customers to visit my store/location</span></div>
+        <div class="builder-option-row"><input type="checkbox" class="goal-chk" value="Get bookings"><span>Get customers to book an appointment</span></div>
+        <div class="builder-option-row"><input type="checkbox" class="goal-chk" value="Get customers to order/buy online"><span>Get customers to order/buy online</span></div>
+        <div class="builder-option-row"><input type="checkbox" class="goal-chk" value="Look professional online"><span>Just be found online and look professional</span></div>
+      </div>
+      <div class="builder-field" style="margin-top:18px;">
+        <label>If you want online ordering, which fits better?</label>
+        <div class="builder-option-list">
+          <div class="builder-option-row"><input type="radio" name="orderStyle" value="Real shopping cart/checkout"><span>A real shopping cart / checkout</span></div>
+          <div class="builder-option-row"><input type="radio" name="orderStyle" value="Contact-to-order is fine"><span>Just want customers to reach out to order</span></div>
+          <div class="builder-option-row"><input type="radio" name="orderStyle" value="Not applicable"><span>Not applicable</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="builder-card">
+      <h2>Pricing, story &amp; testimonials</h2>
+      <p class="card-sub">Skip anything that doesn't apply — we can add these later too.</p>
+      <div class="builder-field">
+        <label for="pricing">Pricing or packages to show (optional)</label>
+        <textarea id="pricing" placeholder="e.g. Basic Wash $25, Full Detail $80 — one per line"></textarea>
+      </div>
+      <div class="builder-field">
+        <label for="story">Your story, for the About section (optional)</label>
+        <textarea id="story" placeholder="How did you get started? What makes your business different?"></textarea>
+      </div>
+      <div class="builder-field">
+        <label for="testimonials">Testimonials to feature (optional)</label>
+        <textarea id="testimonials" placeholder="Paste 1-3 short quotes, or leave blank"></textarea>
+      </div>
+    </div>
+
+    <div class="builder-card">
+      <h2>Logo</h2>
+      <div class="builder-field">
+        <div class="builder-option-list">
+          <div class="builder-option-row"><input type="radio" name="logo" value="Use current logo"><span>Yes, use my current logo</span></div>
+          <div class="builder-option-row"><input type="radio" name="logo" value="No logo yet" checked><span>No logo yet</span></div>
+          <div class="builder-option-row"><input type="radio" name="logo" value="Want a new logo designed"><span>I'd like a new one designed</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="builder-card">
+      <h2>Anything else?</h2>
+      <p class="card-sub">Websites you like, things you don't want, anything else worth knowing.</p>
+      <div class="builder-field">
+        <textarea id="notes"></textarea>
+      </div>
+    </div>
+
+    <div class="builder-submit-bar">
+      <button type="submit" class="btn btn-primary" style="width:100%;">See My Live Preview &rarr;</button>
+      <p class="builder-submit-note">Colors, fonts, and photo style come next — you'll be able to change all of it yourself.</p>
+    </div>
+  </form>
+</div>
+
+<!-- ============ STEP 2: LIVE PREVIEW + CUSTOMIZE PANEL ============ -->
+<div id="step2" hidden>
+  <div class="preview-shell">
+    <div class="preview-intro-bar">
+      <button type="button" class="builder-back-link" id="backToInfo" style="background:none;border:none;cursor:pointer;margin-bottom:10px;">&larr; Edit my info</button>
+      <h1 id="previewIntro">Here's a first look.</h1>
+      <p>Use the panel to try different colors, fonts, sections, and photo styles — it updates instantly. When it feels right, send it to Brett.</p>
+    </div>
+
+    <div class="preview-frame">
+      <div class="preview-frame-chrome">
+        <span class="chrome-dot"></span><span class="chrome-dot"></span><span class="chrome-dot"></span>
+        <span class="chrome-url" id="previewUrl">www.yourbusiness.com</span>
+      </div>
+      <iframe id="previewCanvas" title="Live website preview" scrolling="yes"></iframe>
+    </div>
+  </div>
+
+  <div id="customizePanel">
+    <div class="panel-header">
+      <h3>Customize your site</h3>
+      <p>Changes update the preview instantly.</p>
+      <div class="panel-toggle-mobile" id="panelToggle">Tap to expand ▲</div>
+    </div>
+    <div class="panel-tabs">
+      <button type="button" class="panel-tab active" data-pane="colors">Colors</button>
+      <button type="button" class="panel-tab" data-pane="style">Font</button>
+      <button type="button" class="panel-tab" data-pane="sections">Sections</button>
+      <button type="button" class="panel-tab" data-pane="photos">Photos</button>
+    </div>
+    <div class="panel-body">
+      <div class="panel-pane active" id="pane-colors">
+        <div id="paletteOptions"></div>
+      </div>
+      <div class="panel-pane" id="pane-style">
+        <div id="styleOptions"></div>
+      </div>
+      <div class="panel-pane" id="pane-sections">
+        <div id="sectionList"></div>
+      </div>
+      <div class="panel-pane" id="pane-photos">
+        <div id="photoOptions"></div>
+      </div>
+    </div>
+    <div class="panel-footer">
+      <button type="button" class="btn btn-primary" id="sendToBrett">Send This to Brett</button>
+      <button type="button" class="btn btn-outline" id="copySummary">Copy Instead</button>
+      <p id="sendStatus" hidden></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/business-categories.js"></script>
+<script src="js/category-picker.js"></script>
+<script src="js/demo-builder.js"></script>
+</body>
+</html>
