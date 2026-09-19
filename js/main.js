@@ -1,5 +1,12 @@
 // Web Builders — shared site behavior
 
+// Reveal the page (see the fade-in rules in css/style.css). Runs as
+// soon as this script executes, which is as soon as the browser has
+// parsed the page — typically well before images/fonts finish loading.
+if (document.body) {
+    document.body.classList.add("page-ready");
+}
+
 // Some mobile browsers try to restore the previous page's scroll position
 // on a fresh navigation (especially from a link near the bottom of a long
 // page), which can land a new page scrolled down instead of at the top.
